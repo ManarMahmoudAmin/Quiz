@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="setting">
+        <div class="my-5 d-flex align-items-center justify-content-center">
+            <div class="width w-50 mx-auto p-4 shadow-lg rounded">
+                <h1 class="text-center mt-3 text-info">Setting Your Quiz</h1>
+                <div class="line bg-opacity-10 bg-black mt-4"></div>
+                <div class="form-group my-4 text-white">
+                    <label for="categoryElem" class="lead mb-3">Category:</label>
+                    <select name="category" id="categoryElem" class="form-control">
+                        <option value="9">General Knowledge</option>
+                        <option value="25">Art</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="21">Sports</option>
+                        <option value="26">Celebrites</option>
+                    </select>
+                </div>
+                <div class="form-group my-4 text-white">
+                    <label for="difficultyElem" class="lead mb-2">Difficulty: </label>
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="radio" name="difficultyElem" id="easy"value="easy" checked>
+                        <label class="form-check-label" for="easy">Easy</label>
+                    </div>
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="radio" name="difficultyElem" id="medium" value="medium">
+                        <label class="form-check-label" for="medium">Medium</label>
+                    </div>
+                    <div class="form-check py-1">
+                        <input class="form-check-input" type="radio" name="difficultyElem" id="hard" value="hard">
+                        <label class="form-check-label" for="hard">Hard</label>
+                    </div>
+                </div>
+                <div class="form-group my-4 text-white">
+                    <input type="number" class="form-control" placeholder="Number Of Questions" id="numOfQuestionElem" aria-describedby="basic-addon1" required>
+                </div>    
+                <button id="strtBtn" class="btn btn-success text-center px-4">Start</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="quiz">
+        <div class="my-5 d-flex align-items-center justify-content-center">
+            <div class="width w-50 mx-auto p-4 shadow-lg rounded">
+                <h1 class="text-center my-3 text-info">Quiz</h1>
+                <span id="correct" class="btn btn-success float-start">Correct</span>
+                <span id="incorrect" class="btn btn-danger float-start">Incorrect</span>
+                <div class="float-end rounded text-white bg-success p-2 px-3">
+                    <span id="currentQues" class="fw-bold"></span> 
+                    <span>of</span>
+                    <span id="totalNumOfQues" class="fw-bold"></span>
+                    <span>Questions</span>
+                </div>
+                <div class="clearfix"></div>
+                <div class="line bg-opacity-10 bg-black mt-3"></div>
+                <div class="question-body mt-3">
+                    <h5 class="text-white-50">Q: <span id="question"></span></h5>
+                    <div id="answers"></div>
+                    <div id="alert" class=" my-1 py-3 alert alert-danger">Please choose your answer &#128515;</div>
+                    <button id="submitBtn" class=" my-3 btn btn-success px-3 float-end">Submit</button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>   
+        
+    </section>
+
+    <section id="finish">
+        <div class="my-5 d-flex align-items-center justify-content-center">
+            <div class="width w-50 mx-auto p-4 shadow-lg rounded">
+                <h1 class="text-center mt-3 text-info">Finish</h1>
+                <div class="line bg-opacity-10 bg-black mt-4"></div>
+                <p class="my-5 fs-5 text-center text-info fw-bold">Score: <span id="score" class="text-white-50"></span> / <span id="total"></span></p>
+                <button id="tryAgain" class="btn btn-success text-center px-4 float-end">Try Again?</button>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>
